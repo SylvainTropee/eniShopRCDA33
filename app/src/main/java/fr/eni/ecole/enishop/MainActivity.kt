@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import fr.eni.ecole.enishop.bo.Article
 import fr.eni.ecole.enishop.repository.ArticleRepository
+import fr.eni.ecole.enishop.ui.screen.ArticleDetailScreen
 import fr.eni.ecole.enishop.ui.theme.EniShopTheme
 
 
@@ -22,19 +23,11 @@ private const val TAG = "MainActivity"
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        var article = ArticleRepository.getArticle(1)
-        ArticleRepository.addArticle(
-            Article(
-                category = "Truc",
-                urlImage = "mahcin",
-                description = "",
-                name = "ARticle 2",
-                price = 23.0
-            )
-        )
-        Log.i(TAG, article.toString())
-        article = ArticleRepository.getArticle(2)
-        Log.i(TAG, article.toString())
+        enableEdgeToEdge()
+        setContent {
+            EniShopTheme {
+                ArticleDetailScreen()
+            }
+        }
     }
 }
