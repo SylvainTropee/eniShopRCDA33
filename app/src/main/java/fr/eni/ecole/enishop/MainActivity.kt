@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import fr.eni.ecole.enishop.bo.Article
 import fr.eni.ecole.enishop.repository.ArticleRepository
 import fr.eni.ecole.enishop.ui.screen.ArticleDetailScreen
+import fr.eni.ecole.enishop.ui.screen.ArticleFormScreen
 import fr.eni.ecole.enishop.ui.theme.EniShopTheme
 
 
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EniShopTheme {
-                ArticleDetailScreen()
+                ArticleFormScreen()
             }
         }
     }

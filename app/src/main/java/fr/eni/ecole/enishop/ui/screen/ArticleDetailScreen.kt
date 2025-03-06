@@ -41,6 +41,7 @@ fun ArticleDetailScreen(modifier: Modifier = Modifier) {
 @Composable
 fun ArticleDetail(article: Article, modifier: Modifier = Modifier) {
 
+
     Column(
         modifier = Modifier.padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
