@@ -30,7 +30,7 @@ class ArticleDAOMemoryImpl : ArticleDAO {
             name = "Mens Cotton Jacket",
             description = "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member . A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
             price = 55.99,
-            urlImage = " https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+            urlImage = "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
             category = "men's clothing",
             date = Date(),
         )
@@ -46,5 +46,9 @@ class ArticleDAOMemoryImpl : ArticleDAO {
         article.id = articles.size.toLong() + 1
         articles.add(article)
         return article.id
+    }
+
+    override fun findAll(): List<Article> {
+        return articles
     }
 }

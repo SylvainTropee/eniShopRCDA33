@@ -51,6 +51,9 @@ android {
 
 dependencies {
 
+    //accès à la méthode viewModel()
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+
     //async Image
     implementation("io.coil-kt:coil-compose:2.5.0")
 
